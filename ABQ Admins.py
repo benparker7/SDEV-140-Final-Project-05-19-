@@ -15,7 +15,7 @@ pictureLabel.place(x=40, y=96)
 
 
 companyNameLabel = tk.Label(master=frame, text="Albuquerque Associates: Attorneys at Law®", font="Tahoma",
-                     fg="black", bg="#865439", relief=tk.RIDGE)
+                            fg="black", bg="#865439", relief=tk.RIDGE)
 companyNameLabel.place(x=100, y=2)
 
 
