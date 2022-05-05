@@ -16,15 +16,16 @@ pictureLabel.place(x=40, y=96)
 
 companyNameLabel = tk.Label(master=frame, text="Albuquerque Associates: Attorneys at Law®", font="Tahoma",
                             fg="black", bg="#865439", relief=tk.RIDGE)
-companyNameLabel.place(x=100, y=2)
+companyNameLabel.place(x=100, y=0)
 
 
-welcomeLabel = tk.Label(master=frame, text="Welcome administrators,", font="Tahoma", relief=tk.RIDGE)
+welcomeLabel = tk.Label(master=frame, text="Welcome administrators,", font="Tahoma", bg="#865439", relief=tk.RIDGE)
 welcomeLabel.place(x=7, y=30)
 
 
-pleaseLabel = tk.Label(master=frame, text="Please log-in with your credentials", font="Tahoma", relief=tk.RIDGE)
-pleaseLabel.place(x=7, y=54)
+pleaseLabel = tk.Label(master=frame, text="Please log-in with your credentials", font="Tahoma", bg="#865439",
+                       relief=tk.RIDGE)
+pleaseLabel.place(x=7, y=58)
 
 
 usernameLabel = tk.Label(master=frame, text="USERNAME", font="Tahoma 9")
