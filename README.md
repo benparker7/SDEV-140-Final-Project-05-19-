@@ -1,5 +1,5 @@
 # SDEV-140-Final-Project-05-22-
-The source code for my final project for my class. It was created in Python with the tkinter framework.
+The source code for my final project for my class. It was created in Python using the tkinter framework.
 
 This is the log-in screen for use at Albuquerque Associates: Attorneys at Law®.
 
