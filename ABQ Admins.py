@@ -1,21 +1,30 @@
-import tkinter as tk
-from tkinter import messagebox
-window = tk.Tk()
-window.title("AAA log-in")
+"""
+Date: 05/19/2022
+Author: Benjamin Parker
+Version: 1.1
+Name: ABQ Admin log-in
+Summary: This application is the log-in screen for an attorney's office administrators.
+"""
+import tkinter as tk  # Import the tkinter framework
+from tkinter import messagebox  # This is a tool inside tkinter that allows message boxes to pop up
+window = tk.Tk()  # Main window for application
+window.title("AAA log-in")  # The title for the main window
+window.minsize(500, 300)  # The minimum size the main window can be
 
 
-frame = tk.Frame(master=window, width=500, height=250)
-frame.pack(fill=tk.BOTH, side=tk.RIGHT, expand=True)
+# The main window frame that encompasses the whole window
+frame = tk.Frame(master=window, width=500, height=300)
+frame.pack(fill=tk.X, side=tk.RIGHT, expand=True)
 
 # This is the photo that is shown
 icon = tk.PhotoImage(file="Screenshot (59).png")
-small = icon.subsample(5, 5)
-pictureLabel = tk.Label(master=window, image=small)
-pictureLabel.place(x=40, y=96)
+small = icon.subsample(2, 2)  # This makes the image smaller to fit the window
+pictureLabel = tk.Label(master=frame, image=small, bg="black")
+pictureLabel.place(x=98, y=100)  # Anywhere there is a ".place", is where the item is placed in the window
 
 # This is the company name label
 companyNameLabel = tk.Label(master=frame, text="Albuquerque Associates: Attorneys at Law®", font="Tahoma",
-                            fg="black", bg="#865439", relief=tk.RIDGE)
+                            bg="#865439", relief=tk.RIDGE)
 companyNameLabel.place(x=100, y=0)
 
 # This is the welcome label
@@ -25,22 +34,22 @@ welcomeLabel.place(x=7, y=30)
 # This is the please log-in label
 pleaseLabel = tk.Label(master=frame, text="Please log-in with your credentials", font="Tahoma", bg="#865439",
                        relief=tk.RIDGE)
-pleaseLabel.place(x=7, y=58)
+pleaseLabel.place(x=7, y=60)
 
 # This is the "USERNAME" label
-usernameLabel = tk.Label(master=frame, text="USERNAME", font="Tahoma 9")
-usernameLabel.place(x=335, y=80)
+usernameLabel = tk.Label(master=frame, text="USERNAME", font="Tahoma 9", bg="#865439")
+usernameLabel.place(x=335, y=130)
 # This is the entry box where you enter the username
 usernameEntry = tk.Entry(master=frame, borderwidth=2, font="Tahoma 8")
-usernameEntry.place(x=307, y=100)
+usernameEntry.place(x=306, y=150)
 
 # This is the "PASSWORD" label
-passwordLabel = tk.Label(master=frame, text="PASSWORD", font="Tahoma 9")
-passwordLabel.place(x=335, y=129)
+passwordLabel = tk.Label(master=frame, text="PASSWORD", font="Tahoma 9", bg="#865439")
+passwordLabel.place(x=335, y=180)
 # This is the entry box where you enter the password
 passwordEntry = tk.Entry(master=frame, borderwidth=2, font="Tahoma 8")
-passwordEntry.place(x=307, y=150)
-passwordEntry.config(show="*")
+passwordEntry.place(x=306, y=200)
+passwordEntry.config(show="*")  # This allows the password to be shown as "*" characters instead of the actual password
 
 
 frame2 = tk.Frame(master=window)
@@ -61,7 +70,7 @@ def open_new_window():
 
     if uname == possibleU1 and pword == adminPassword:
         messagebox.showinfo("AAA log-in", "Logging in")
-        window.destroy()
+        window.destroy()  # This will close out of the application
     elif uname == "" and pword == "":
         messagebox.showinfo("AAA log-in", "No blanks allowed")
     elif uname != possibleU1:
@@ -74,9 +83,9 @@ def open_new_window():
 
 buttonFrame = tk.Frame(master=window)
 buttonFrame.pack()
-# This is my log-in button underneath the password entry
-button = tk.Button(master=frame, text="Login", bg="black", fg="white", font="Tahoma 9", command=open_new_window)
-button.place(x=348, y=180)
+# This is the log-in button underneath the password entry
+loginButton = tk.Button(master=frame, text="Login", bg="black", fg="white", font="Tahoma 9", command=open_new_window)
+loginButton.place(x=350, y=230)
 
 
 window.mainloop()
