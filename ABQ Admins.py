@@ -70,7 +70,7 @@ def open_new_window():
 
     if uname == possibleU1 and pword == adminPassword:
         messagebox.showinfo("AAA log-in", "Logging in")
-        window.destroy()  # This will close out of the application
+        window.destroy()  # This .destroy will close out of the application
     elif uname == "" and pword == "":
         messagebox.showinfo("AAA log-in", "No blanks allowed")
     elif uname != possibleU1:
