@@ -56,7 +56,7 @@ frame2 = tk.Frame(master=window)
 frame2.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
 
 # Variables for the administrator's username and password
-possibleU1 = "tsbsesnoecatf_aaa"  # this should be secure enough so no outside entity can access this form
+adminUsername = "tsbsesnoecatf_aaa"  # this should be secure enough so no outside entity can access this form
 
 adminPassword = "3dyuYYsXh3H-J#J$"  # A secure password
 
@@ -68,12 +68,12 @@ def open_new_window():
     uname = usernameEntry.get()  # This takes the input for the username and plugs it in to see if it matches
     pword = passwordEntry.get()  # This takes the input for the password and plugs it in to see if it matches
 
-    if uname == possibleU1 and pword == adminPassword:
+    if uname == adminUsername and pword == adminPassword:
         messagebox.showinfo("AAA log-in", "Logging in")
         window.destroy()  # This .destroy will close out of the application
     elif uname == "" and pword == "":
         messagebox.showinfo("AAA log-in", "No blanks allowed")
-    elif uname != possibleU1:
+    elif uname != adminUsername:
         messagebox.showinfo("AAA log-in", "Incorrect credentials")
     elif pword != adminPassword:
         messagebox.showinfo("AAA log-in", "Incorrect credentials")
